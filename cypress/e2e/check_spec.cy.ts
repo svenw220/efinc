@@ -1,0 +1,16 @@
+describe('main spec', () => {
+  it('change age', () => {
+    cy.visit('http://localhost:8080/')
+		cy.get('input[data-income]').clear().type('3400')
+		cy.get('input[data-income]').should('have.value', '3400')
+		cy.get('input[data-consumption]').clear().type('2200')
+		cy.get('input[data-consumption]').should('have.value', '2200')
+		cy.get('[data-card2]').click()
+		cy.get('input[data-sparen]').clear().type('700')
+		cy.get('input[data-sparen]').should('have.value', '700')
+		cy.get('#results').click()
+		cy.get('[data-saving]').should('have.text', '-700 €')
+		cy.get('[data-income-res]').should('have.text', '3400 €')
+		cy.get('[data-consumption-res]').should('have.text', '-2200 €')
+  })
+})

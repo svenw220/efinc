@@ -1,0 +1,65 @@
+{
+  "name": "efinc",
+  "version": "0.1.1",
+  "private": true,
+  "scripts": {
+    "deploy:dev": "bash scripts/deploy_dev.sh",
+    "deploy:prd": "bash scripts/deploy_prd.sh",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "cypress:open": "cypress open",
+    "cypress:gen": "./node_modules/.bin/cypress run --env type=base --config-file cypress.config.ts --config video=false",
+    "cypress:run": "./node_modules/.bin/cypress run --env type=actual --config-file cypress.config.ts --config video=false"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.13",
+    "bootstrap": "^4.6.0",
+    "core-js": "^3.8.3",
+    "cypress-visual-regression": "^2.0.1",
+    "pinia": "^2.0.34",
+    "sass": "^1.62.0",
+    "sass-loader": "^13.2.0",
+    "vue": "^3.2.47",
+    "vue-class-component": "^8.0.0-0",
+    "vue-final-modal": "^4.3.0",
+    "vue-loader": "^17.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-plugin-typescript": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "@vue/eslint-config-typescript": "^9.1.0",
+    "cypress": "^12.1.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "jquery": "^3.6.1",
+    "typescript": "~4.5.5"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended",
+      "@vue/typescript"
+    ],
+    "parserOptions": {
+      "parser": "@typescript-eslint/parser"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
+}
